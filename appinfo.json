@@ -1,0 +1,54 @@
+{
+  "uuid": "0f7b8336-d43d-4806-9154-566ffd9f3a8c",
+  "shortName": "Dice",
+  "longName": "Dice",
+  "companyName": "vvzvlad",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+ "media": [
+    {
+        "menuIcon": true,
+        "type": "png",
+        "name": "DEFAULT_MENU_ICON",
+        "file": "img/logo.png"
+    },
+    {
+        "type": "png",
+        "name": "DICE_1",
+        "file": "img/1.png"
+    },
+    {
+        "type": "png",
+        "name": "DICE_2",
+        "file": "img/2.png"
+    },
+    {
+        "type": "png",
+        "name": "DICE_3",
+        "file": "img/3.png"
+    },
+    {
+        "type": "png",
+        "name": "DICE_4",
+        "file": "img/4.png"
+    },
+    {
+        "type": "png",
+        "name": "DICE_5",
+        "file": "img/5.png"
+    },
+    {
+        "type": "png",
+        "name": "DICE_6",
+        "file": "img/6.png"
+    }
+    ]
+  }
+}
