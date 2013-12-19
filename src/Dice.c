@@ -8,6 +8,10 @@ static GBitmap *image; /* создаем  указатель на изображ
 bool first_time=true; /* создаем флаг первого запуска */
 static const uint32_t images[] = {RESOURCE_ID_DICE_1,RESOURCE_ID_DICE_2,RESOURCE_ID_DICE_3,RESOURCE_ID_DICE_4,RESOURCE_ID_DICE_5,RESOURCE_ID_DICE_6,}; /* создаем массив с номерами картинок */
 
+#define ENG 1
+#define RUS 2
+#define LANG ENG 
+
 
 void timer_call() /* эта функция вызывается при срабатываниии таймера и при первом запуске перебора */
 {
@@ -55,7 +59,12 @@ int main(void)
     text_layer_set_font(text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28)); /* устанавливаем шрифт */
     text_layer_set_text_alignment(text_layer, GTextAlignmentCenter); /* устанавливаем выравнивание по центру */
     layer_add_child(window_get_root_layer(window), text_layer_get_layer(text_layer));  /* подключаем текстовый слой к основному в качестве дочернего */
+#if (LANG == ENG)
+    text_layer_set_text(text_layer, "Shake to roll \n the dice!");  /* показываем сообщение при запуске */
+#endif
+#if (LANG == RUS)
     text_layer_set_text(text_layer, "Встряхните часы для броска костей");  /* показываем сообщение при запуске */
+#endif
     accel_tap_service_subscribe(accel_int);  /* подписываемся на прерывания от акселерометра */
     app_event_loop();  /* ждем событий */
     if (first_time == true) /* если выходим без запуска перебора... */
